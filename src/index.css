@@ -1,13 +1,227 @@
 body {
+  background-color: #f4f6fa;
+  font-family: 'Inter', sans-serif;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.kanban-controls {
+  background-color: #ffffff;
+  padding: 16px;
+  border-bottom: 1px solid #e0e0e0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dropdown-button {
+  background-color: #f4f6fa;
+  border: 1px solid #e0e0e0;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.dropdown-button img {
+  margin-left: 8px;
+}
+
+.dropdown-content {
+  background-color: #ffffff;
+  padding: 8px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  position: absolute;
+  margin-top: 8px;
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+}
+
+.dropdown-content select {
+  border: 1px solid #e0e0e0;
+  padding: 8px;
+  margin-top: 8px;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.kanban-board {
+  display: flex;
+  gap: 16px;
+  padding: 16px;
+}
+
+.kanban-column {
+  flex: 1;
+  padding: 8px;
+  background-color: #f4f6fa;
+  border-radius: 8px;
+}
+
+.kanban-column h3 {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 16px;
+  color: #333;
+}
+
+.ticket-card {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+  margin-bottom: 16px;
+  text-align: left;
+}
+
+.ticket-id {
+  font-size: 12px;
+  font-weight: 500;
+  color: #666;
+  margin-bottom: 8px;
+  text-align: left;
+}
+
+.ticket-title {
+  font-size: 14px;
+  font-weight: 530;
+  margin-bottom: 8px;
+  color: #333;
+  text-align: left;
+}
+
+.ticket-tags {
+  display: flex;
+  gap: 8px;
+  text-align: left;
+}
+
+.ticket-tag {
+  border-radius: 4px;
+  padding: 4px 8px;
+  font-size: 12px;
+  color: #555;
+}
+
+.priority-icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.ticket-card:hover {
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .kanban-board {
+      flex-direction: column;
+  }
+
+  .kanban-column {
+      margin-bottom: 16px;
+  }
+}
+
+.kanban-container {
+  padding: 10px;
+  background-color: #f4f6fa;
+}
+
+.kanban-board {
+  display: flex;
+}
+
+.kanban-column {
+  margin-right: 10px;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.column-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.add-icon {
+  width: 18px;
+  cursor: pointer;
+}
+
+.ticket-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ticket-id {
+  font-weight: bold;
+}
+
+.menu-icon {
+  width: 24px;
+  cursor: pointer;
+}
+
+.ticket-tag {
+  color: #6b7280;
+}
+
+.dropdown-button {
+  background-color: #ffffff;
+  border: 1px solid #dcdcdc;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+
+.dropdown-button img {
+  margin-left: 8px;
+}
+
+.dropdown-content {
+  background-color: #ffffff;
+  padding: 12px;
+  border: 1px solid #dcdcdc;
+  border-radius: 8px;
+  position: absolute;
+  margin-top: 8px;
+  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+  font-size: 14px;
+  width: 200px;
+}
+
+.dropdown-content label {
+  font-size: 12px;
+  color: #777777;
+  margin-bottom: 4px;
+}
+
+.dropdown-content select {
+  width: 100%;
+  border: 1px solid #dcdcdc;
+  padding: 8px;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+  font-size: 14px;
+  color: #333333;
+  margin-top: 8px;
+}
+
+.dropdown-content select option {
+  font-size: 14px;
+}
+
+.dropdown-button:hover {
+  background-color: #f0f0f0;
+  border-color: #cccccc;
 }
